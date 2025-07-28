@@ -16,13 +16,22 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -31px; /* Adjusted for border */
-            top: 4px;
-            width: 18px;
-            height: 18px;
+            left: 0;
+            transform: translateX(-50%); /* Centers the dot on the line */
+            top: 8px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
+            background-color: #f8fafc; /* Same as body background */
+            border: 2px solid #a5b4fc; /* indigo-300 */
+        }
+        .timeline-item.highlighted::before {
+            top: 6px;
+            width: 16px;
+            height: 16px;
             background-color: #4f46e5; /* indigo-600 */
-            border: 4px solid #e0e7ff; /* indigo-100 */
+            border: none;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2); /* Glow effect */
         }
         .section-title {
             position: relative;
@@ -34,7 +43,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
+            width: 80px; /* Increased length */
             height: 3px;
             background-color: #4f46e5; /* indigo-600 */
         }
@@ -59,6 +68,13 @@
             background: white;
             border-left: 4px solid #4f46e5;
         }
+        .highlight-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -70,8 +86,8 @@
             <div class="hidden md:flex space-x-6">
                 <a href="#experience" class="text-slate-600 hover:text-indigo-600 transition">Experience</a>
                 <a href="#education" class="text-slate-600 hover:text-indigo-600 transition">Education</a>
+                <a href="#highlights" class="text-slate-600 hover:text-indigo-600 transition">Highlights</a>
                 <a href="#skills" class="text-slate-600 hover:text-indigo-600 transition">Skills</a>
-                <a href="#awards" class="text-slate-600 hover:text-indigo-600 transition">Awards</a>
                 <a href="#publications" class="text-slate-600 hover:text-indigo-600 transition">Publications</a>
                 <a href="#contact" class="text-slate-600 hover:text-indigo-600 transition">Contact</a>
             </div>
@@ -83,8 +99,8 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#experience" class="block py-2 text-slate-600 hover:text-indigo-600">Experience</a>
             <a href="#education" class="block py-2 text-slate-600 hover:text-indigo-600">Education</a>
+            <a href="#highlights" class="block py-2 text-slate-600 hover:text-indigo-600">Highlights</a>
             <a href="#skills" class="block py-2 text-slate-600 hover:text-indigo-600">Skills</a>
-            <a href="#awards" class="block py-2 text-slate-600 hover:text-indigo-600">Awards</a>
             <a href="#publications" class="block py-2 text-slate-600 hover:text-indigo-600">Publications</a>
             <a href="#contact" class="block py-2 text-slate-600 hover:text-indigo-600">Contact</a>
         </div>
@@ -98,13 +114,13 @@
                 <h1 class="text-5xl md:text-6xl font-bold text-slate-800 mb-4">Davit Akelyan</h1>
                 <h2 class="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">Strategic Thinker, Researcher, and Designer</h2>
                 <p class="text-lg text-slate-600 leading-relaxed mb-8">
-                    I am a strategic thinker with a strong background in strategy, research, coordination, project management, and design. Holding both Bachelor's and Master's degrees in Philosophy, I am currently pursuing a Ph.D. in Philosophy of Science. My intellectual pursuits extend into interdisciplinary studies, scientific journalism, and the effective popularization of scientific knowledge.
+                    I am a strategic thinker with a strong background in strategy, research, coordination, project management, and design. Holding both Bachelor's and Master's degrees in Philosophy, I am currently pursuing a Ph.D. in Philosophy of Science. I am particularly interested in the intersection of strategy and research development, where I can leverage my expertise in strategy research, market analysis, identifying growth opportunities, and overseeing the preparation and execution of strategic initiatives.
                 </p>
                 <div class="flex justify-center md:justify-start space-x-4">
                     <a href="#contact" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition transform hover:-translate-y-1">
                         Get in Touch
                     </a>
-                    <button id="voice-summary-btn" class="magic-button text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:opacity-90 transition transform hover:-translate-y-1 flex items-center space-x-2">
+                     <button id="voice-summary-btn" class="magic-button text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:opacity-90 transition transform hover:-translate-y-1 flex items-center space-x-2">
                         <i data-lucide="play-circle" class="w-5 h-5"></i>
                         <span>Voice Summary</span>
                     </button>
@@ -120,8 +136,8 @@
         <!-- Work Experience Section -->
         <section id="experience" class="mb-24">
             <h2 class="text-4xl font-bold text-slate-800 section-title">Work Experience</h2>
-            <div class="relative border-l-2 border-indigo-200 pl-12">
-                <div class="timeline-item mb-12">
+            <div class="relative border-l-2 border-indigo-200 ml-4 pl-8">
+                <div class="timeline-item highlighted mb-12">
                     <p class="text-sm text-indigo-500 font-semibold">2022 - Present</p>
                     <h3 class="text-xl font-bold text-slate-800">Strategic Program Researcher and Coordinator</h3>
                     <p class="text-md text-slate-600 font-medium mb-4">The FUTURE ARMENIAN Development Foundation</p>
@@ -138,7 +154,7 @@
                         <li>Preparing high-level background papers, proposals, and recommendations for strategic meetings.</li>
                     </ul>
                 </div>
-                <div class="timeline-item mb-12">
+                <div class="timeline-item highlighted mb-12">
                     <p class="text-sm text-indigo-500 font-semibold">2024 - 2025</p>
                     <h3 class="text-xl font-bold text-slate-800">Secretary</h3>
                     <p class="text-md text-slate-600 font-medium">"Scientific Artsakh" Journal</p>
@@ -146,13 +162,21 @@
                 <div class="timeline-item mb-12">
                     <p class="text-sm text-indigo-500 font-semibold">2024</p>
                     <h3 class="text-xl font-bold text-slate-800">Teaching Associate</h3>
-                    <p class="text-md text-slate-600 font-medium">American University of Armenia</p>
+                    <p class="text-md text-slate-600 font-medium mb-4">American University of Armenia</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-2">
+                        <li>Served as a Teaching Associate for the 'Introduction to Ethics' course.</li>
+                        <li>Facilitated seminars and guided philosophical discussions.</li>
+                        <li>Communicated with diverse student groups and evaluated their work.</li>
+                    </ul>
                 </div>
                 <div class="timeline-item mb-12">
                     <p class="text-sm text-indigo-500 font-semibold">2018 - 2024</p>
                     <h3 class="text-xl font-bold text-slate-800">Trainer</h3>
                     <p class="text-md text-slate-600 font-medium mb-4">Youth For Development Foundation</p>
-                    <p class="text-slate-600">Conducted courses on "Information Management", "Speed Reading Techniques", "Time Management", & "Goal Mapping".</p>
+                     <ul class="list-disc list-inside text-slate-600 space-y-2">
+                        <li>Conducted courses on "Information Management" and "Speed Reading Techniques".</li>
+                        <li>Led training sessions on "Time Management" and "Goal Mapping".</li>
+                    </ul>
                 </div>
                 <div class="timeline-item mb-12">
                     <p class="text-sm text-indigo-500 font-semibold">2021 - 2022</p>
@@ -180,8 +204,8 @@
         <!-- Education Section -->
         <section id="education" class="mb-24">
             <h2 class="text-4xl font-bold text-slate-800 section-title">Education</h2>
-            <div class="relative border-l-2 border-indigo-200 pl-12">
-                <div class="timeline-item mb-12">
+            <div class="relative border-l-2 border-indigo-200 ml-4 pl-8">
+                <div class="timeline-item highlighted mb-12">
                     <p class="text-sm text-indigo-500 font-semibold">2021 - 2024</p>
                     <h3 class="text-xl font-bold text-slate-800">Ph.D. in Philosophy of Science</h3>
                     <p class="text-md text-slate-600">Yerevan State University</p>
@@ -199,6 +223,69 @@
             </div>
         </section>
 
+        <!-- Key Career Highlights Section -->
+        <section id="highlights" class="mb-24">
+            <h2 class="text-4xl font-bold text-slate-800 section-title">Key Career Highlights</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Highlight Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="globe-2" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Global Policy Dialogue</h3>
+                    </div>
+                    <p class="text-slate-600">Engaged in high-level policy discussions on global challenges like good governance and anti-corruption as a community member of Common Futures Conversations at Chatham House.</p>
+                </div>
+                 <!-- Highlight Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="users" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Youth Empowerment & Training</h3>
+                    </div>
+                    <p class="text-slate-600">Advanced youth engagement initiatives through the Youth for Development Foundation (YFDF), leading programs and training youth in critical thinking, leadership, and civic engagement.</p>
+                </div>
+                 <!-- Highlight Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="library" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Civic Assembly Co-organizer</h3>
+                    </div>
+                    <p class="text-slate-600">Co-organized the first pan-Armenian Citizens’ Assembly, The Convention of The Future Armenian, coordinating expert-driven discussions and facilitating high-impact policy dialogues.</p>
+                </div>
+                 <!-- Highlight Card 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="lightbulb" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Product Development & Innovation</h3>
+                    </div>
+                    <p class="text-slate-600">Played a major role in conceptualizing, designing, and maintaining the <a href="https://armagora.am/en/" target="_blank" class="text-indigo-600 hover:underline font-semibold">Armagora platform</a>, an innovative space for inclusive discussions on Armenia’s future.</p>
+                </div>
+                 <!-- Highlight Card 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="landmark" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">University Governance</h3>
+                    </div>
+                    <p class="text-slate-600">Served as a student member on the Board of Trustees at Yerevan State University (YSU), contributing to strategic development and high-level decision-making from 2022 to 2024.</p>
+                </div>
+                 <!-- Highlight Card 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="plane" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">International Experience</h3>
+                    </div>
+                    <p class="text-slate-600">Participated in numerous mobility programs, youth exchanges, and training sessions across Armenia, Moldova, Georgia, Denmark, and Cyprus between 2017 and 2025.</p>
+                </div>
+                 <!-- Highlight Card 7 -->
+                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="graduation-cap" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Trainer at School of Knowledge</h3>
+                    </div>
+                    <p class="text-slate-600">Developed skills for high school students in non-formal education at YSU's Gevorg Arshakyan Knowledge School, focusing on time management and communication.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Skills Section -->
         <section id="skills" class="mb-24">
             <h2 class="text-4xl font-bold text-slate-800 section-title">Skills</h2>
@@ -211,7 +298,7 @@
                         <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">InDesign</span>
                         <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">XD</span>
                         <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Figma</span>
-                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Premier Pro</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2.5 rounded-full">Premier Pro</span>
                         <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">After Effects</span>
                         <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Blender</span>
                         <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Microsoft Office</span>
@@ -345,7 +432,7 @@
             <p class="text-sm text-slate-400 mt-2">Designed with care and precision.</p>
         </div>
     </footer>
-
+    
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
@@ -362,7 +449,7 @@
         
         // Voice Summary
         const voiceSummaryBtn = document.getElementById('voice-summary-btn');
-        const voiceSummaryText = `Welcome to the portfolio of Davit Akelyan. Davit is a strategic thinker, researcher, and designer, currently pursuing a Ph.D. in Philosophy of Science. With a strong background in strategic planning, project management, and design, he has extensive experience across various industries. His work includes leading strategic research, developing data-driven reports, and coordinating large-scale initiatives. Davit is proficient in a wide range of design and technical tools, including Adobe Creative Suite and AI technologies. He is fluent in Armenian and English, with intermediate knowledge of Russian. Explore his work, publications, and connect with him through his academic and social networks.`;
+        const voiceSummaryText = `Welcome to the portfolio of Davit Akelyan, a strategic thinker, researcher, and designer. He holds Bachelor's and Master's degrees in Philosophy and is currently pursuing a Ph.D. in Philosophy of Science at Yerevan State University. Davit's professional experience is diverse, highlighted by his role as a Strategic Program Researcher and Coordinator at The FUTURE ARMENIAN Development Foundation, and as a Teaching Associate at the American University of Armenia. His career is marked by significant highlights, including engaging in global policy dialogues at Chatham House, empowering youth through training, co-organizing the first pan-Armenian Citizens’ Assembly, and contributing to the development of the innovative Armagora platform. He possesses a strong skill set in design and technical tools, including Adobe Creative Suite and a proficiency in AI. As a dedicated academic, Davit has a growing list of scientific publications and has been recognized with awards for Best Bachelor Student of Armenia and Best Speech Reporter. You can connect with Davit through his academic and social networks, or reach out directly via the contact information provided.`;
         
         let utterance = new SpeechSynthesisUtterance(voiceSummaryText);
         
