@@ -75,6 +75,11 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
+        .publication-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -88,6 +93,7 @@
                 <a href="#education" class="text-slate-600 hover:text-indigo-600 transition">Education</a>
                 <a href="#highlights" class="text-slate-600 hover:text-indigo-600 transition">Highlights</a>
                 <a href="#skills" class="text-slate-600 hover:text-indigo-600 transition">Skills</a>
+                <a href="#trainings" class="text-slate-600 hover:text-indigo-600 transition">Trainings</a>
                 <a href="#publications" class="text-slate-600 hover:text-indigo-600 transition">Publications</a>
                 <a href="#contact" class="text-slate-600 hover:text-indigo-600 transition">Contact</a>
             </div>
@@ -101,6 +107,7 @@
             <a href="#education" class="block py-2 text-slate-600 hover:text-indigo-600">Education</a>
             <a href="#highlights" class="block py-2 text-slate-600 hover:text-indigo-600">Highlights</a>
             <a href="#skills" class="block py-2 text-slate-600 hover:text-indigo-600">Skills</a>
+            <a href="#trainings" class="block py-2 text-slate-600 hover:text-indigo-600">Trainings</a>
             <a href="#publications" class="block py-2 text-slate-600 hover:text-indigo-600">Publications</a>
             <a href="#contact" class="block py-2 text-slate-600 hover:text-indigo-600">Contact</a>
         </div>
@@ -128,7 +135,7 @@
             </div>
             <div class="md:w-1/3 flex justify-center">
                 <div class="rounded-full shadow-2xl profile-pic-gradient">
-                    <img src="https://i.postimg.cc/Jzffg7jb/Image-DA.png" alt="Davit Akelyan" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover">
+                    <img src="https://i.postimg.cc/Jzffg7jb/Image_DA.png" alt="Davit Akelyan" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover">
                 </div>
             </div>
         </section>
@@ -150,7 +157,6 @@
                         <li>Designing and delivering concept proposals, presentations, and strategic roadmaps to guide decision-making.</li>
                         <li>Coordinating and facilitating effective communication across committees, developing briefing materials and reports.</li>
                         <li>Contributing to the development and curation of professional content for internal and external communications.</li>
-                        <li>Driving the promotion, implementation, and organization of the foundation's key projects.</li>
                         <li>Preparing high-level background papers, proposals, and recommendations for strategic meetings.</li>
                     </ul>
                 </div>
@@ -270,14 +276,6 @@
                  <!-- Highlight Card 6 -->
                 <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
                     <div class="flex items-center mb-4">
-                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="plane" class="w-6 h-6 text-indigo-600"></i></div>
-                        <h3 class="text-xl font-bold text-slate-800">International Experience</h3>
-                    </div>
-                    <p class="text-slate-600">Participated in numerous mobility programs, youth exchanges, and training sessions across <span class="font-semibold text-purple-700">Armenia, Moldova, Georgia, Denmark, and Cyprus</span> between 2017 and 2025.</p>
-                </div>
-                 <!-- Highlight Card 7 -->
-                <div class="bg-white p-6 rounded-lg shadow-md highlight-card">
-                    <div class="flex items-center mb-4">
                         <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="graduation-cap" class="w-6 h-6 text-indigo-600"></i></div>
                         <h3 class="text-xl font-bold text-slate-800">Trainer at School of Knowledge</h3>
                     </div>
@@ -331,6 +329,96 @@
                 </div>
             </div>
         </section>
+
+       <!-- Trainings & Social Experiences Section -->
+        <section id="trainings" class="mb-24">
+            <h2 class="text-4xl font-bold text-slate-800 section-title">Trainings & Experiences</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Trainings Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="award" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-700">Trainings & Programs</h3>
+                    </div>
+                    <ul class="list-none space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Common Futures Conversations:</strong> Program member at the Chatham House community. | 2025-present</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Project Management:</strong> Completed 35-hour course based on PMI & ISO standards.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Yerevan Academy for Linguistics and Philosophy:</strong> Participant in International summer program in philosophy. | 2017-2019</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Social Experiences Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="users" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-700">Social & Organizational Roles</h3>
+                    </div>
+                    <ul class="list-none space-y-4">
+                         <li class="flex items-start">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Trainer:</strong> "School of Knowledge", YSU Students affair center. | 2018-2019</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Group Coordinator-mentor:</strong> "Program Hacketton", YSU Student Council. | 2019-2022</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Group Coordinator & trainer:</strong> "LAMP" project, YFD Foundation. | 2019-2021</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Trainer:</strong> "SKYE" club, World Vision Armenia. | 2018-2019</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Organizer:</strong> «Aurora Prize Special Weekend of Events», IDeA Foundation. | 2017-2018</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Organizer:</strong> «2nd Marketing» forum, United Youth Union NGO. | 2017</span>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- International Projects Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4"><i data-lucide="plane" class="w-6 h-6 text-indigo-600"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-700">International Projects</h3>
+                    </div>
+                     <ul class="list-none space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Cyprus (2023):</strong> "reSPECTRUM" Erasmus+ Training on health education.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Denmark (2022):</strong> "Shaping New Tomorrow" Erasmus+ Youth Exchange on personal development.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Georgia (2021):</strong> "On The Move" Erasmus+ Youth Exchange on migration and human rights.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Armenia (2018):</strong> "Be A Reason To Smile" Erasmus+ Youth Exchange on social inclusion.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="font-semibold text-slate-800">Moldova (2017):</strong> "Another World Is Possible" Erasmus+ Mobility on digital art for inclusion.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         
         <!-- Awards Section -->
         <section id="awards" class="mb-24">
@@ -351,18 +439,25 @@
 
         <!-- Publications Section -->
         <section id="publications" class="mb-24">
-            <h2 class="text-4xl font-bold text-slate-800 section-title">Scientific Publications</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">10. "The Essence and Epistemological Significance of the Conceptual Dispute Between Fallibilism and Infallibilism"</strong>, Scientific Proceedings, Humanities and Social Sciences, Vanadzor, 2024 (1), pp. 249-261. <a href="https://doi.org/10.58726/27382915-2024.1-249" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">9. "The Development of Fallibilism in the Philosophy of Pragmatism in 19th Century"</strong>, Scientific Artsakh, «ARTSAKH» Publ., №1 (20), 2024, pp. 97-108. <a href="https://doi.org/10.52063/25792652-2024.1.20-97" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">8. "The Development and Manifestations of Fallibilism in the Epistemology of Descartes and Hume"</strong>, Region and the world scientific-analytical journal, volume XV, № 1 (50), 2024, pp. 87-94. <a href="https://doi.org/10.58587/18292437-2024.1-87" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in English)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">7. "Fallibilism as an epistemological-methodological basis for treating modern public discourse in Armenia"</strong>, Scientific Artsakh, «ARTSAKH» Publ., No 4 (19), 2023, pp. 86-99. <a href="https://doi.org/10.52063/25792652-2023.4.19-86" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">6. "Epistemological and methodological aspectes and problems of conceptual debate of fallibilism and infallibilism"</strong>, Region and the world scientific-analytical journal, volume XIV, № 6 (49), 2023. pp. 74-82. <a href="https://doi.org/10.58587/18292437-2023.6-74" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in English)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">5. "The sources of fallibilism in ancient philosophy"</strong>, Scientific Artsakh, «ARTSAKH» Publ., №3 (18), 2023, pp. 74-88. <a href="https://doi.org/10.52063/25792652-2023.3.18-74" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">4. "The problem of causality in the context of the newtonian and modern scientific picture of the world"</strong>, Scientific Reedings, ASU publishing house, Stepanakert, 2022, pp. 181-188. (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">3. "The problem of philosophical conceptualization in the context of experimental science"</strong>, Scientific proceedings, issue B (№2), Gyumri, 2020, pp. 140-151. (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">2. "Comparative analysis of cooperation of science and philosophy in the context of bilateral relations"</strong>, Collection of scientific articles of YSU SSS, 1.2 (28), Yerevan, 2019, pp. 315-325. (in Armenian)</p></div>
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"><p class="text-slate-600"><strong class="text-slate-800">1. "The idea of Aristotle's "Nothingness" in the ontology of the problem of matter at the beginning of material reality"</strong>, Collection of scientific articles of YSU SSS, 1.3 (26), Yerevan, 2018, pp. 247-254. (in Armenian)</p></div>
+            <div class="border-t border-b border-slate-200">
+                <button id="publications-toggle" class="w-full flex justify-between items-center py-4 focus:outline-none">
+                    <h2 class="text-4xl font-bold text-slate-800">Scientific Publications</h2>
+                    <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
+                </button>
+                <div id="publications-content" class="publication-content">
+                    <div class="space-y-4 py-4">
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">10. "The Essence and Epistemological Significance of the Conceptual Dispute Between Fallibilism and Infallibilism"</strong>, Scientific Proceedings, Humanities and Social Sciences, Vanadzor, 2024 (1), pp. 249-261. <a href="https://doi.org/10.58726/27382915-2024.1-249" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">9. "The Development of Fallibilism in the Philosophy of Pragmatism in 19th Century"</strong>, Scientific Artsakh, «ARTSAKH» Publ., №1 (20), 2024, pp. 97-108. <a href="https://doi.org/10.52063/25792652-2024.1.20-97" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">8. "The Development and Manifestations of Fallibilism in the Epistemology of Descartes and Hume"</strong>, Region and the world scientific-analytical journal, volume XV, № 1 (50), 2024, pp. 87-94. <a href="https://doi.org/10.58587/18292437-2024.1-87" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in English)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">7. "Fallibilism as an epistemological-methodological basis for treating modern public discourse in Armenia"</strong>, Scientific Artsakh, «ARTSAKH» Publ., No 4 (19), 2023, pp. 86-99. <a href="https://doi.org/10.52063/25792652-2023.4.19-86" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">6. "Epistemological and methodological aspectes and problems of conceptual debate of fallibilism and infallibilism"</strong>, Region and the world scientific-analytical journal, volume XIV, № 6 (49), 2023. pp. 74-82. <a href="https://doi.org/10.58587/18292437-2023.6-74" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in English)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">5. "The sources of fallibilism in ancient philosophy"</strong>, Scientific Artsakh, «ARTSAKH» Publ., №3 (18), 2023, pp. 74-88. <a href="https://doi.org/10.52063/25792652-2023.3.18-74" target="_blank" class="text-indigo-600 hover:underline font-medium">[DOI]</a> (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">4. "The problem of causality in the context of the newtonian and modern scientific picture of the world"</strong>, Scientific Reedings, ASU publishing house, Stepanakert, 2022, pp. 181-188. (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">3. "The problem of philosophical conceptualization in the context of experimental science"</strong>, Scientific proceedings, issue B (№2), Gyumri, 2020, pp. 140-151. (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">2. "Comparative analysis of cooperation of science and philosophy in the context of bilateral relations"</strong>, Collection of scientific articles of YSU SSS, 1.2 (28), Yerevan, 2019, pp. 315-325. (in Armenian)</p></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm"><p class="text-slate-600"><strong class="text-slate-800">1. "The idea of Aristotle's "Nothingness" in the ontology of the problem of matter at the beginning of material reality"</strong>, Collection of scientific articles of YSU SSS, 1.3 (26), Yerevan, 2018, pp. 247-254. (in Armenian)</p></div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -385,7 +480,10 @@
                 <div>
                     <h3 class="text-2xl font-bold text-slate-700 mb-6">Academic Networks</h3>
                     <div class="flex justify-center flex-wrap gap-4">
-                        <a href="https://orcid.org/0000-0002-0100-5773" target="_blank" class="bg-white p-3 h-14 w-14 rounded-full shadow-md network-icon" title="ORCID">
+                        <a href="https://scholar.google.com/citations?user=nkTYaAEAAAAJ&hl=en" target="_blank" class="bg-white p-3 h-14 w-14 rounded-full shadow-md network-icon" title="Google Scholar">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/2048px-Google_Scholar_logo.svg.png" alt="Google Scholar Logo" class="h-8">
+                        </a>
+                        <a href="https://orcid.org/0000-002-0100-5773" target="_blank" class="bg-white p-3 h-14 w-14 rounded-full shadow-md network-icon" title="ORCID">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/ORCID_iD.svg/2048px-ORCID_iD.svg.png" alt="ORCID Logo" class="h-6">
                         </a>
                         <a href="https://www.researchgate.net/profile/Davit-Akelyan" target="_blank" class="bg-white p-3 h-14 w-14 rounded-full shadow-md network-icon" title="ResearchGate">
@@ -409,7 +507,7 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/1690643591twitter-x-logo-png.webp" alt="X Logo" class="h-6">
                         </a>
                         <a href="https://www.behance.net/david_ak" target="_blank" class="bg-white p-3 h-14 w-14 rounded-full shadow-md network-icon" title="Behance">
-                            <img src="https://cdn.worldvectorlogo.com/logos/behance-1.svg" alt="Behance Logo" class="h-8">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/behance-1-logo-png-transparent.png" alt="Behance Logo" class="h-8 p-1">
                         </a>
                         <a href="https://www.instagram.com/david_akelyan/" target="_blank" class="bg-white p-3 h-14 w-14 rounded-full shadow-md network-icon" title="Instagram">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram Logo" class="h-8">
@@ -471,6 +569,23 @@
             }
         });
 
+        // Publications Toggle
+        const publicationsToggle = document.getElementById('publications-toggle');
+        const publicationsContent = document.getElementById('publications-content');
+        
+        publicationsToggle.addEventListener('click', () => {
+            const publicationsIcon = publicationsToggle.querySelector('svg');
+            if (publicationsContent.style.maxHeight) {
+                publicationsContent.style.maxHeight = null;
+                if(publicationsIcon) publicationsIcon.style.transform = 'rotate(0deg)';
+            } else {
+                publicationsContent.style.maxHeight = publicationsContent.scrollHeight + "px";
+                if(publicationsIcon) publicationsIcon.style.transform = 'rotate(180deg)';
+            }
+        });
+
     </script>
 </body>
 </html>
+
+
